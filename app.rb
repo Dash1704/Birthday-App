@@ -11,6 +11,9 @@ class Birthday < Sinatra::Base
     end
 
     post '/message' do
+      @birthday_kid = params[:birthday_kid]
+      @month = params[:month]
+      @day = params[:day]
       erb :message
     end
 
